@@ -197,10 +197,10 @@ export default function NotationsLanding() {
             <Button variant="ghost" className="text-gray-600"  onClick={() => navigate('/Register')}>
               Sign In
             </Button>
-            <Button>Get Started</Button>
+            <Button onClick={()=>navigate("login")}>Get Started</Button>
           </div>
 
-          <button
+          <button 
             className="md:hidden hover:scale-110 transition-transform duration-300 p-2"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
@@ -476,10 +476,7 @@ export default function NotationsLanding() {
                 ))}
               </div>
 
-              <Button size="lg" className="group">
-                Start Your Free Trial
-                <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
+              
             </div>
 
             <div
@@ -552,19 +549,13 @@ export default function NotationsLanding() {
               className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-slide-up"
               style={{ animationDelay: "0.4s" }}
             >
-              <Input
-                type="email"
-                placeholder="Enter your email address"
-                className="max-w-sm bg-white/10 border-white/20 text-white placeholder:text-white/70 hover:bg-white/20 focus:scale-105"
-              />
-              <Button size="lg" className="bg-white text-purple-600 hover:bg-slate-100 hover:shadow-xl">
+            
+              <Button size="lg" onClick={()=>navigate("/login")} className="bg-white text-purple-600 hover:bg-slate-100 hover:shadow-xl">
                 Get Started Free
               </Button>
             </div>
 
-            <p className="text-sm text-purple-100 animate-slide-up" style={{ animationDelay: "0.6s" }}>
-              No credit card required • 14-day free trial • Cancel anytime
-            </p>
+            
           </div>
         </div>
       </section>
